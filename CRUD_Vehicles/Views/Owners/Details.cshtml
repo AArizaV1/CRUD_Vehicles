@@ -1,0 +1,35 @@
+﻿@model Week7CodeAssessment.Models.Owner
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>DETAILS OWNER</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            FIRST NAME
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            LAST NAME
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class = "col-sm-2">
+            DRIVER LICENSE
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DriverLicense)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Edit</a> |
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
